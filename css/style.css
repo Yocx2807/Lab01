@@ -1,151 +1,224 @@
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #af9c78; /* Fondo claro y limpio */
+  font-family: Arial, sans-serif;
+  background-color: #af9c78;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
 }
 
-.proyectos-page{
-    background: #f5f5f5;
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
-  
+
+/* Contenedor principal de la página */
+.proyectos-page {
+  background-color: #af9c78;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  flex-direction: column; /* Evita que las tarjetas se vean forzadas a apilarse */
+  flex-wrap: wrap; /* Asegura que los elementos se acomoden bien */
+}
+
 /* Carrusel */
 #carrusel {
-    width: 80%;
-    max-width: 1200px;
-    margin: 40px auto; /* Centrar y dar espacio */
-    border-radius: 5px; /* Bordes menos redondeados */
-    overflow: hidden;
-    border: 3px solid #ddd; /* Borde más sutil */
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15); /* Sombra ligera */
-    background-color: #e2e6ce;
+  width: 80%;
+  max-width: 1200px;
+  margin: 40px auto;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 3px solid #ddd;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  background-color: #e2e6ce;
 }
 
-/* Ajuste de imágenes */
 .carousel-item img {
-    height: 33vh; /* Un tercio de la pantalla */
-    object-fit: contain;
+  height: 33vh;
+  object-fit: contain;
 }
 
-/* Flechas personalizadas */
 .custom-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.3); /* Fondo más sutil */
-    border: none;
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: background 0.3s ease-in-out;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.3s ease-in-out;
 }
 
 .custom-arrow i {
-    color: white;
-    font-size: 20px;
+  color: white;
+  font-size: 20px;
 }
 
 .custom-arrow:hover {
-    background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .carousel-control-prev {
-    left: 10px;
+  left: 10px;
 }
 
 .carousel-control-next {
-    right: 10px;
+  right: 10px;
 }
 
-  
-  .card {
-    width: 350px;
-    margin-top: 30px; /* 🔹 Mayor separación arriba */
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
-    background: #fff;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-right: 15px;
-    margin-left: 15px;
-    display: flex;
-  }
-  
-  .card img {
-    width: 100%;
-    height: 200px; /* 🔹 Imagen más grande */
-    object-fit: contain;
-  }
-  
-  .card-content {
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .card h3 {
-    font-size: 1.4rem; /* 🔹 Texto más grande */
-    margin-bottom: 10px;
-  }
-  
-  .card p {
-    font-size: 1rem;
-    color: #202020;
-    margin-bottom: 15px;
-  }
-  
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #007bff;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 8px;
-    transition: background 0.3s ease, transform 0.2s ease;
-  }
-  
-  .btn:hover {
-    background: #0056b3;
-    transform: scale(1.05);
-  }
-  
-  .card:hover {
-    transform: scale(1.08);
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
-  }
-  
-  .contact-form-container {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 50px auto;
-  }
-  .contact-form-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  .btn-custom {
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-    font-weight: bold;
-  }
-  .btn-custom:hover {
-    background-color: #0056b3;
-  }
-  .form-label {
-    font-weight: bold;
-  }
-  .form-control {
-    border-radius: 5px;
-  }
-  
+/* Contenedor de las tarjetas */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; /* Distribuye las tarjetas uniformemente */
+  gap: 20px;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 1200px; /* Define un ancho máximo */
+  margin: auto; /* Centrar el contenedor en la página */
+}
+
+
+/* Estilo de las tarjetas */
+.card {
+  width: 280px; /* Reduce el ancho */
+  max-width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  background: #7e8285;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 300px; /* Permite que las tarjetas ocupen un mínimo de 300px */
+  max-width: 300px;
+}
+
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #202020;
+  margin-bottom: 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+
+}
+
+.btn:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+.card:hover {
+  transform: scale(1.08);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo del formulario de contacto */
+.contact-form-container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 50px auto;
+}
+
+.contact-form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.btn-custom {
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn-custom:hover {
+  background-color: #0056b3;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.form-control {
+  border-radius: 5px;
+}
+
+/* Estilo del pie de página */
+footer {
+  background-color: #2a2a2a;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  margin-top: auto;
+  width: 100%;
+}
+
+/* Contenedor de la información de contacto */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Información de contacto */
+.contact-info p {
+  margin: 3px 0;
+  padding: 0 15px;
+}
+
+/* Enlaces de redes sociales */
+.social-media {
+  display: flex;
+  gap: 12px;
+  padding: 0 20px;
+}
+
+.social-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Información de pie de página adicional */
+.footer-bottom p {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #b0b0b0;
+}
+
+footer a:hover {
+  color: #f39c12;
+}
+
+
