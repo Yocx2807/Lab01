@@ -1,0 +1,151 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #af9c78; /* Fondo claro y limpio */
+}
+
+.proyectos-page{
+    background: #f5f5f5;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+/* Carrusel */
+#carrusel {
+    width: 80%;
+    max-width: 1200px;
+    margin: 40px auto; /* Centrar y dar espacio */
+    border-radius: 5px; /* Bordes menos redondeados */
+    overflow: hidden;
+    border: 3px solid #ddd; /* Borde más sutil */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15); /* Sombra ligera */
+    background-color: #e2e6ce;
+}
+
+/* Ajuste de imágenes */
+.carousel-item img {
+    height: 33vh; /* Un tercio de la pantalla */
+    object-fit: contain;
+}
+
+/* Flechas personalizadas */
+.custom-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.3); /* Fondo más sutil */
+    border: none;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.3s ease-in-out;
+}
+
+.custom-arrow i {
+    color: white;
+    font-size: 20px;
+}
+
+.custom-arrow:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
+}
+
+  
+  .card {
+    width: 350px;
+    margin-top: 30px; /* 🔹 Mayor separación arriba */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-right: 15px;
+    margin-left: 15px;
+    display: flex;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 200px; /* 🔹 Imagen más grande */
+    object-fit: contain;
+  }
+  
+  .card-content {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .card h3 {
+    font-size: 1.4rem; /* 🔹 Texto más grande */
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #202020;
+    margin-bottom: 15px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  .card:hover {
+    transform: scale(1.08);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contact-form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 50px auto;
+  }
+  .contact-form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .btn-custom {
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  .btn-custom:hover {
+    background-color: #0056b3;
+  }
+  .form-label {
+    font-weight: bold;
+  }
+  .form-control {
+    border-radius: 5px;
+  }
+  
